@@ -30,6 +30,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
       - uses: ./.github/actions/combo-step
-        # with:
-        #   uri: ${{ github.event.inputs.uri }}
+        with:
+          uri: ${{ github.event.inputs.uri }}
         #   some_other_input: ${{ github.event.inputs.some_other_input }}
