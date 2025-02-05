@@ -27,7 +27,7 @@ runs:
       id: test-outputs
       shell: bash
       run: |
-        my-output="1234" >> $GITHUB_OUTPUT
+        echo "my-output=1234" >> $GITHUB_OUTPUT
     # - name: Login to Azure as repository service principal
     #   uses: azure/login@v1
     #   with:
