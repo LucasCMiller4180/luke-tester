@@ -16,18 +16,18 @@ runs:
     - name: Run a one-line script
       shell: bash
       run: echo Hello, world!
-    - name: Run a multi-line script
-      shell: bash
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
-        echo "${{ github.event.inputs.uri }}"
-        echo "${{ inputs.uri }}"
+    # - name: Run a multi-line script
+    #   shell: bash
+    #   run: |
+    #     echo Add other actions to build,
+    #     echo test, and deploy your project.
+    #     echo "${{ github.event.inputs.uri }}"
+    #     echo "${{ inputs.uri }}"
     - name: Test outputs
       id: test-outputs
       shell: bash
       run: |
-        echo "my-output=1234" >> $GITHUB_OUTPUT
+        my-output="1234" >> $GITHUB_OUTPUT
     # - name: Login to Azure as repository service principal
     #   uses: azure/login@v1
     #   with:
