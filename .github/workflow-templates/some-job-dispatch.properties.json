@@ -1,8 +1,0 @@
-{
-    "name": "Some Job Dispatch",
-    "description": "A template to dispatch some job",
-    "iconName": "opticon telescope",
-    "categories": [
-        "utilities"
-    ]
-}
