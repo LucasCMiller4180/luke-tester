@@ -12,6 +12,8 @@ jobs:
   test_output:
     runs-on: ubuntu-latest
     steps:
+      - name: Print Workflow Dispatch Inputs
+        run: echo "${{ toJSON(github.event.inputs) }}"
       - name: Print the URI
         run: |
           echo "The URI is ${{ github.event.inputs.uri }}"
