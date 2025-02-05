@@ -29,7 +29,11 @@ jobs:
         run: echo "${{ toJSON(github.event.inputs) }}"
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
-      - uses: ./.github/actions/combo-step
+      - name: Combo Breaker
+        id: combo-breaker
+        uses: ./.github/actions/combo-step
         with:
           uri: ${{ github.event.inputs.uri }}
         #   some_other_input: ${{ github.event.inputs.some_other_input }}
+      - name: Print Combo Breaker Outputs
+        run: echo "TEST TEST ${{ toJSON(steps.combo-breaker.outputs) }}"
