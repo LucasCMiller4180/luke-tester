@@ -36,4 +36,4 @@ jobs:
           uri: ${{ github.event.inputs.uri }}
         #   some_other_input: ${{ github.event.inputs.some_other_input }}
       - name: Print Combo Breaker Outputs
-        run: echo "TEST TEST ${{ toJSON(steps.combo-breaker.outputs) }}"
+        run: echo "TEST TEST ${{ steps.combo-breaker.outputs.my-output }}"
