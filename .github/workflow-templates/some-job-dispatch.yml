@@ -1,0 +1,17 @@
+Name: Testing Jobs Template
+
+on:
+  workflow_dispatch:
+    inputs:
+      uri:
+        description: 'uri of the endpoint to send the request to'
+        required: true
+        default: '/api/identity/authentication/v2/test'
+
+jobs:
+  test_output:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print the URI
+        run: |
+          echo "The URI is ${{ github.event.inputs.uri }}"
