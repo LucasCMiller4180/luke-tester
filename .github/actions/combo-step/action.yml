@@ -28,10 +28,10 @@ runs:
       shell: bash
       run: |
         echo "my-output=1234" >> $GITHUB_OUTPUT
-    - name: Login to Azure as repository service principal
-      uses: azure/login@v1
-      with:
-        client-id: ${{ vars.AZURE_CLIENT_ID }}
-        tenant-id: ${{ vars.AZURE_TENANT_ID }}
-        environment: ${{ vars.AZURE_ENVIRONMENT }}
-        allow-no-subscriptions: true
+    # - name: Login to Azure as repository service principal
+    #   uses: azure/login@v1
+    #   with:
+    #     client-id: ${{ vars.AZURE_CLIENT_ID }}
+    #     tenant-id: ${{ vars.AZURE_TENANT_ID }}
+    #     environment: ${{ vars.AZURE_ENVIRONMENT }}
+    #     allow-no-subscriptions: true
